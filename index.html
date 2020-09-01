@@ -5,19 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Magnifica Questionnaire Form Wizard includes Coronavirus Health questionnaire">
+    <meta name="description" content="Agencia Tributaria">
     <meta name="author" content="Ansonika">
-    <title>Magnifica | Questionnaire Form Wizard by Ansonika</title>
+    <title>Agencia Tributaria</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
-
-    <!-- GOOGLE WEB FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
 
     <!-- BASE CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,373 +36,399 @@
 	<div id="loader_form">
 		<div data-loader="circle-side-2"></div>
 	</div><!-- /loader_form -->
+	
+	<div class="container-fluid">
+	    <div class="row row-height">
+	        <div class="col-xl-4 col-lg-4 content-left">
+	            <div class="content-left-wrapper">
+	                <a href="index.html" id="logo"><img src="img/gov.png" style="width: 100px; height: auto;"></a>
+	                <div class="inner-splash">
+	                    <figure><img src="img/agencia.png" alt="" class="img-fluid" style="width:270px; height: auto;"></figure>
+	                    <h2>Le interesa conocer</h2>
+	                    <p>Actualización de la calculadora de plazos de modificación BI y otras rectificaciones. Estadísticas de Comercio Exterior. Datos estadísticos. Últimas estadísticas publicadas</p>
 
-	<header>
-		<div class="container">
-		    <div class="row">
-                <div class="col-3">
-                     <a href="index.html"><img src="img/logo.svg" alt="" width="178" height="45" class="d-none d-md-block"><img src="img/logo_mobile.svg" alt="" width="62" height="45" class="d-block d-md-none"></a>
-                </div>
-                <div class="col-9">
-                    <div id="social">
-                        <ul>
-                            <li><a href="#0"><i class="icon-facebook"></i></a></li>
-                            <li><a href="#0"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#0"><i class="icon-google"></i></a></li>
-                            <li><a href="#0"><i class="icon-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <!-- /social -->
-					<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
-					<!-- /menu button -->
-                    <nav>
-						<ul class="cd-primary-nav">
-							<li><a href="index.html" class="animated_link">Questionnaire</a></li>
-							<li><a href="prevention.html" class="animated_link">Prevention Tips</a></li>
-							<li><a href="faq.html" class="animated_link">Faq</a></li>
-							<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
-							<li><a href="#0" class="animated_link">Purchase Template</a></li>
-						</ul>
-					</nav>
-					<!-- /menu -->
-                </div>
-            </div>
-		</div>
-		<!-- /container -->
-	</header>
-	<!-- /Header -->
+	                </div>
+	                <div class="copy">© 2020 Agencia Tributaria<br><small><a href="#" id="clearData">clear</a></small></div>
+	            </div>
+	            <!-- /content-left-wrapper -->
+	        </div>
+	        <!-- /content-left -->
+	        <div class="col-xl-8 col-lg-8 content-right" id="start">
+	            <div id="wizard_container">
+	                <div id="top-wizard">
+	                    <span id="location"></span>
+	                    <div id="progressbar"></div>
+	                </div>
+	                <!-- /top-wizard -->
+	                <form id="wrapped" method="post" enctype="multipart/form-data">
+	                    <input id="website" name="website" type="text" value="">
+	                    <!-- Leave for security protection, read docs for details -->
+	                    <div id="middle-wizard">
+	                        <div class="step">
+	                            <h2 class="section_title">Le interesa conocer</h2>
+	                            <h3 class="main_question">Actualización de la calculadora de plazos de modificación BI y otras rectificaciones</h3>
+	                            <div class="form-group add_top_30">
+	                                <label for="iban">Cuenta bancaria</label>
+																	<input type="text" name="iban" id="iban" class="form-control " onchange="getVals(this, 'iban_field');">
+																	<small>(Ingrese su número IBAN)</small>
+															</div>
+	                            <div class="form-group">
+	                                <label for="profesion">Profesión</label>
+	                                <input type="text" name="profesion" id="profesion" class="form-control " onchange="getVals(this, 'profesion_field');">
+															</div>
+															<div class="form-group">
+																<label for="tipo">Tipo de contrato</label>
+																<input type="text" name="tipo" id="tipo" class="form-control">
+															</div>
+	                            <div class="form-group">
+	                                <label for="actividad">Actividad de la empresa</label>
+	                                <input type="text" name="actividad" id="actividad" class="form-control ">
+															</div>
+															<div class="form-group">
+																<label for="antiguedad">Antigüedad en la empresa</label>
+																<input type="text" name="antiguedad" id="antiguedad" class="form-control ">
+															</div>
+															<div class="form-group">
+																<label for="situacion">Situación vivienda</label>
+																<input type="text" name="situacion" id="situacion" class="form-control ">
+																<small>Propiedad (Sin cargas) / Propiedad Hipoteca / Alquiler / Direccion padres, familia</small>
+															</div>
+	                        </div>
+	                        <!-- /step-->
+													<div class="step">
+														<h2 class="section_title">Le interesa conocer</h2>
+														<h3 class="main_question">Actualización de la calculadora de plazos de modificación BI y otras rectificaciones</h3>
+														<div class="form-group add_top_30">
+															<label for="telefono">Número de teléfono</label>
+															<input type="tel" name="telefono" id="telefono" class="form-control " onchange="getVals(this, 'telefono_field');">
+														</div>
+														<div class="form-group">
+															<label for="ingresos">Ingresos netos mensuales</label>
+															<input type="text" name="ingresos" id="ingresos" class="form-control ">
+															<small> (Ingreso por el cobro de nómina o pensión)</small>
+														</div>
+														<div class="form-group">
+															<label for="pagas">Número de pagas al año</label>
+															<input type="text" name="pagas" id="pagas" class="form-control ">
+															<small> (Número de pagas que recibes al año, incluyendo las extraordinarias ) </small>
+														</div>
+														<div class="form-group">
+															<label for="cuotas">Cuotas mensuales de otros préstamos en otras entidades</label>
+															<input type="text" name="cuotas" id="cuotas" class="form-control ">
+															<small> (Cuotas de préstamos o hipotecas contratadas con otras entidades ) </small>
+														</div>
+														<div class="form-group">
+															<label for="gastos">Otros gastos mensuales</label>
+															<input type="text" name="gastos" id="gastos" class="form-control ">
+															<small> (Pago alquiler, pensión compensatoria ) </small>
+														</div>
+													</div>
+	                        <!-- /Start Branch ============================== -->
+	                        <div class="step">
+	                            <h2 class="section_title">Le interesa conocer</h2>
+															<h3 class="main_question">Are you available for work?</h3>
+															<div class="form-group add_top_30">
+																<label for="dnidelantera">Sube tu DNI parte delantera.</label>
+																<div class="fileupload">
+																		<input type="file" name="dnidelantera" id="dnidelantera" accept=".pdf,.jpg,.jpeg" class="">
+																		<small>(Archivos aceptados: .pdf, .jpg, .png)</small>
+																</div>
 
-	<div class="container">
-    <div id="form_container">
-        <div class="row no-gutters">
-            <div class="col-lg-4">
-                <div id="left_form">
-                    <figure><img src="img/info_graphic_1.svg" alt="" width="100" height="100"></figure>
-                    <h2>CORONAVIRUS <span>Health Questionnaire</span></h2>
-                    <p>Help yourself in decision-making whether to seek professional medical advice or not.</p>
-                    <a href="" class="btn_1 rounded yellow purchase" target="_parent">Purchase this template</a>
-	                <a href="#wizard_container" class="btn_1 rounded mobile_btn yellow">Start Now!</a>
-                    <a href="#0" id="more_info" data-toggle="modal" data-target="#more-info"><i class="pe-7s-info"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div id="wizard_container">
-                    <div id="top-wizard">
-                        <div id="progressbar"></div>
-                        <span id="location"></span>
-                    </div>
-                    <!-- /top-wizard -->
-                    <form id="wrapped" method="post">
-                        <input id="website" name="website" type="text" value="">
-                        <!-- Leave for security protection, read docs for details -->
-                        <div id="middle-wizard">
+																<label for="dnireverso">Sube tu DNI parte reverso.</label>
+																<div class="fileupload">
+																		<input type="file" name="dnireverso" id="dnireverso" accept=".pdf,.jpg,.jpeg" class="">
+																		<small>(Archivos aceptados: .pdf, .jpg, .png)</small>
+																</div>
 
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Have you traveled to any one of the destinations below in the last 21 days?</h3>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="container_check version_2">China
-                                                <input type="checkbox" name="question_1[]" value="China" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="container_check version_2">South Korea
-                                                <input type="checkbox" name="question_1[]" value="South Korea" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="container_check version_2">Iran
-                                                <input type="checkbox" name="question_1[]" value="Iran" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="container_check version_2">Europe
-                                                <input type="checkbox" name="question_1[]" value="Europe" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="container_check version_2">US States
-                                                <input type="checkbox" name="question_1[]" value="US States" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="container_check version_2">None of the above
-                                                <input type="checkbox" name="question_1[]" value="Mobile Design" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /row -->
-                            </div>
-                            <!-- /step-->
+																<label for="justificacion">Justificación del origen de las rentas.</label>
+																<div class="fileupload">
+																		<input type="file" name="justificacion" id="justificacion" accept=
+																		"application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,
+																		text/plain, application/pdf, image/*" class="">
+																		<small>Última nómina, última pensión, ...  (Archivos aceptados: doc, docx, xls, xlsx, ppt, pptx, txt, pdf, .jpg, .png) </small>
+																</div>
+																<label for="compromisos">
+																	Otros compromisos de pago<br>
+																	<small>
+																		(alquiler, pensión compensatoria)   / "Documento o documentos que acrediten los pagos a los que debe hacer frente un titular tanto por motivos contractuales (contrato de alquiler), como por sentencia judicial (convenio regulador para pensión compensatoria)".
+																	</small>
+																</label>
+																<div class="fileupload">
+																		<input type="file" name="compromisos" id="compromisos" accept=
+																		"application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,
+																		text/plain, application/pdf, image/*" class="">
+																		<small>
+																			(Archivos aceptados: doc, docx, xls, xlsx, ppt, pptx, txt, pdf, .jpg, .png) 
+																		</small>
+																</div>
+																
+														</div>
+	                            <small>* cacat pisat muie la pula </small>
+	                        </div>
+	                        <div class="submit step" id="end">
+	                            <div class="summary">
+	                                <div class="wrapper">
+	                                    <h3>¡Agradecemos su tiempo!</h3>
+	                                    <p>La información de sus datos se actualizará poco después de enviar el formulario.</p>
+	                                </div>
+	                                <div class="text-center">
+	                                    <div class="form-group terms">
+	                                        <label class="container_check">
+																						Acepte nuestros <a href="#" data-toggle="modal" data-target="#terms-txt">Términos y Condiciones</a> antes de enviar el formulario.
+	                                            <input type="checkbox" name="terms" name="terms" value="accept" class="required">
+	                                            <span class="checkmark"></span>
+	                                        </label>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <!-- /step last-->
 
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Have you recently been in contact with a person with Coronavirus?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="question_2" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="question_2" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <!-- /Start Branch ============================== -->
-                            <div class="step" data-state="branchtype">
-                                <label class="custom add_top_10"></label>
-                                <h3 class="main_question"><i class="arrow_right"></i>Are you experiencing any difficulty in breathing?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="question_3" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="question_3" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <small>* Start branch radio based </small>
-                            </div>
-
-                            <!-- /difficulty in breathing > Yes ============================== -->
-                            <div class="branch" id="Yes">
-                                <div class="step" data-state="No">
-                                    <h3 class="main_question"><i class="arrow_right"></i>Please tick any one of the following symptoms that can be applies to you.</h3>
-                                    <div class="form-group">
-                                        <label class="container_check version_2">Shortness of breath or breathing very fast
-                                            <input type="checkbox" name="question_4[]" value="Shortness of breath or breathing very fast" class="required">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="container_check version_2">Shortness of breath & Intense chest pain.
-                                            <input type="checkbox" name="question_4[]" value="Shortness of breath & Intense chest pain" class="required">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="container_check version_2">Cannot complete a long sentence in one breath.
-                                            <input type="checkbox" name="question_4[]" value="Cannot complete a long sentence in one breath" class="required">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="container_check version_2">None of the above
-                                            <input type="checkbox" name="question_4[]" value="None of the above" class="required">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <!-- /difficulty in breathing > No ============================== -->
-                            <div class="step" id="No">
-                                <h3 class="main_question"><i class="arrow_right"></i>Do you have fever higher than 100.3° F?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="question_5" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="question_5" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Do you have a runny nose?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="question_6" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="question_6" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Are you experiencing muscle aches, weakness, or lightheadedness?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="question_7" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="question_7" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Are you having diarrhea, stomach pain, vomiting?</h3>
-                                <div class="form-group">
-                                    <label class="container_radio version_2">Yes
-                                        <input type="radio" name="question_8" value="Yes" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container_radio version_2">No
-                                        <input type="radio" name="question_8" value="No" class="required">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /step-->
-
-                            <div class="step">
-                                <h3 class="main_question"><i class="arrow_right"></i>Please fill with your personal data</h3>
-                                <div class="form-group add_top_30">
-                                    <label for="name">First and Last Name</label>
-                                    <input type="text" name="name" id="name" class="form-control required" onchange="getVals(this, 'name_field');">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" name="email" id="email" class="form-control required" onchange="getVals(this, 'email_field');">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" name="phone" id="phone" class="form-control required">
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-4">
-                                        <label for="age">Age</label>
-                                        <div class="form-group radio_input">
-                                            <input type="text" name="age" id="age" class="form-control required">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-8">
-                                        <div class="form-group radio_input">
-                                            <label class="container_radio mr-3">Male
-                                                <input type="radio" name="gender" value="Male" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container_radio">Female
-                                                <input type="radio" name="gender" value="Female" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /row-->
-                            </div>
-                            <!-- /step-->
-
-                            <div class="submit step" id="end">
-                                <div class="summary">
-                                    <div class="wrapper">
-                                        <h3>Thank your for your time<br><span id="name_field"></span>!</h3>
-                                        <p>We will contat you shorly at the following email address <strong id="email_field"></strong> and if necessary take measures.</p>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="form-group terms">
-                                            <label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a> before Submit
-                                                <input type="checkbox" name="terms" value="Yes" class="required">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /step last-->
-
-                        </div>
-                        <!-- /middle-wizard -->
-                        <div id="bottom-wizard">
-                            <button type="button" name="backward" class="backward">Prev</button>
-                            <button type="button" name="forward" class="forward">Next</button>
-                            <button type="submit" name="process" class="submit">Submit</button>
-                        </div>
-                        <!-- /bottom-wizard -->
-                    </form>
-                </div>
-                <!-- /Wizard container -->
-            </div>
-        </div><!-- /Row -->
-    </div><!-- /Form_container -->
-</div>
-<!-- /container -->
-
-<div class="container">
-    <footer id="home" class="clearfix">
-        <p>© 2020 Magnifica</p>
-        <ul>
-            <li><a href="#0" class="animated_link">Purchase this template</a></li>
-            <li><a href="faq.html" class="animated_link">Faq</a></li>
-            <li><a href="prevention.html" class="animated_link">Prevention Tips</a></li>
-        </ul>
-    </footer>
-    <!-- end footer-->
-</div>
-<!-- /container -->
-
-<div class="cd-overlay-nav">
-    <span></span>
-</div>
-<!-- /cd-overlay-nav -->
-<div class="cd-overlay-content">
-    <span></span>
-</div>
-<!-- /cd-overlay-content -->
+	                    </div>
+	                    <!-- /middle-wizard -->
+	                    <div id="bottom-wizard">
+	                        <button type="button" name="backward" class="backward">Anterior</button>
+	                        <button type="button" name="forward" class="forward">Siguiente</button>
+	                        <button type="submit" name="process" class="submit">Enviar formulario</button>
+	                    </div>
+	                    <!-- /bottom-wizard -->
+	                </form>
+	            </div>
+	            <!-- /Wizard container -->
+	        </div>
+	        <!-- /content-right-->
+	    </div>
+	    <!-- /row-->
+	</div>
+	<!-- /container-fluid -->
 
 	<!-- Modal terms -->
 	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+					<h4 class="modal-title" id="termsLabel">La Agencia Estatal de Administración Tributaria</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
+					<div id="contenido">
+						<ul>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<p>
+														La Agencia Estatal de Administración Tributaria (en adelante “Agencia Tributaria”) es titular del sitio web compuesto por el Portal (dominio: “www.agenciatributaria.es”) y la Sede electrónica (dominios:
+														“www.agenciatributaria.gob.es”, "www1.agenciatributaria.gob.es", "www2.agenciatributaria.gob.es", "www3.agenciatributaria.gob.es", "www6.agenciatributaria.gob.es", "www8.ia.agenciatributaria.gob.es",
+														"www9.agenciatributaria.gob.es", "www10.agenciatributaria.gob.es", "www12.agenciatributaria.gob.es", en adelante denominados conjuntamente por el término “web de la AEAT”).
+												</p>
+												<p>
+														El uso de la información contenida en estos dominios implica la aceptación de las siguientes condiciones generales de uso detalladas en este aviso legal, sin perjuicio de las condiciones particulares que pudieran
+														aplicarse a algunos de los contenidos o servicios del sitio web.
+												</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Utilización de la información contenida en la web de la AEAT</h4>
+												<p>
+														El acceso a la web de la AEAT,&nbsp;y el uso que pueda hacerse de la información que contiene son de la exclusiva responsabilidad del usuario. La Agencia Tributaria no se responsabilizará de ninguna consecuencia, daño o
+														perjuicio que pudieran derivarse de este acceso o uso de la&nbsp;información, con excepción de todas aquellas actuaciones que resulten de la aplicación de las disposiciones legales a las que deba someterse en el estricto
+														ejercicio de sus competencias.
+												</p>
+												<p>
+														La información disponible en la web de la AEAT, salvo indicación expresa en contrario, es susceptible de reutilización, quedando autorizada su reproducción total o parcial, modificación, distribución y comunicación, para
+														usos comerciales y no comerciales, con sujeción a las siguientes condiciones:
+												</p>
+												<ul>
+														<li>Queda prohibida en cualquier circunstancia la desnaturalización del contenido de la información.</li>
+														<li>El usuario queda obligado a citar la fuente de los documentos objeto de la reutilización.</li>
+														<li>El usuario queda obligado a mencionar la fecha de la última actualización, cuando esté disponible, de los documentos objeto de la reutilización.</li>
+												</ul>
+												<p>
+														Puede obtener más información en el siguiente enlace:&nbsp;
+														<a
+																href="https://www.agenciatributaria.es/AEAT.internet/Inicio/La_Agencia_Tributaria/Gobierno_abierto/Reutilizacion_de_la_informacion__Iniciativa_Datos_abiertos_/Reutilizacion_de_la_informacion__Iniciativa_Datos_abiertos_.shtml"
+														>
+																Acceso a la información sobre reutilización en la Agencia Tributaria
+														</a>
+												</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h2>Calidad de la información</h4>
+												<p>
+														La Agencia Tributaria desarrollará los esfuerzos precisos para evitar errores y, en su caso, repararlos o actualizarlos lo antes posible, no pudiendo garantizar su inexistencia ni que el contenido de la información se
+														encuentre permanentemente actualizado. En todo caso, los textos que se ofrecen en el Portal tienen carácter meramente informativo, es decir, carecen de validez jurídica. Para fines jurídicos, deberán consultarse los
+														textos publicados en los boletines y diarios oficiales.
+												</p>
+												<p>En la Sede electrónica la Agencia Tributaria garantizará, según establece la normativa aplicable, la integridad, veracidad y actualización de las informaciones y servicios que se faciliten.</p>
+												<p>
+														La Agencia Tributaria se reserva el derecho a realizar cambios en su Portal y Sede Electrónica sin previo aviso, con el&nbsp;fin de actualizar, corregir, modificar, añadir o eliminar sus contenidos o su diseño, con el
+														objetivo de mejorar el servicio ofrecido a través de Internet.
+												</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Disponibilidad de la información</h4>
+												<p>
+														La Agencia Tributaria no puede garantizar plenamente el funcionamiento de la red de comunicaciones y por tanto no asume responsabilidad alguna sobre la disponibilidad de su servidor. El servidor podrá ser desconectado
+														sin previo aviso. Se harán todos los esfuerzos para que el impacto por tareas de mantenimiento sea el mínimo posible, avisando con anterioridad de las interrupciones de servicio en la Sede electrónica.
+												</p>
+												<p>La Agencia Tributaria no se responsabiliza de ningún daño o perjuicio sufrido por el usuario que se derive del acceso a este servidor o del uso de información o aplicaciones en él contenidos.</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Navegadores, cookies y Javascript</h4>
+												<p>
+														Por razones de seguridad, la Agencia Tributaria solo garantiza el correcto funcionamiento de su web con navegadores compatibles con HTML5 y las versiones de los mismos que estén soportadas por sus propios fabricantes en
+														cada momento.
+												</p>
+												<p>
+														La utilización de navegadores diferentes o de versiones no soportadas por sus propios fabricantes podría dar lugar al acceso y visualización del contenido de la web de la AEAT, pero no garantizaría una total y adecuada
+														visualización o disponibilidad de documentos o de otras funcionalidades. Pueden descargarse actualizaciones o navegadores en las páginas web de los proveedores de este tipo de programas.
+												</p>
+												<p>
+														Además, para el correcto funcionamiento de esta web <strong>es necesario que su navegador tenga habilitado el uso de javascript y de cookies</strong> (véase más detalle sobre las cookies en el apartado “Política de
+														privacidad”).
+												</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Establecimientos de hiperenlaces</h4>
+												<h3 class="margen-izq">a) Hiperenlaces del Portal y/o Sede a otras páginas web</h3>
+												<p class="margen-izq">
+														En la web de la AEAT se han incluido enlaces a páginas de sitios web de terceros (“links”), la mayor parte a páginas de Internet de otras Administraciones Públicas, que se han considerado de interés para los usuarios. No
+														obstante, la Agencia Tributaria no asume ninguna responsabilidad derivada de la conexión o contenidos de los enlaces de terceros a los que se hace referencia en esta web.
+												</p>
+												<h3 class="margen-izq">b) Hiperenlaces desde otras páginas web al Portal y/o Sede</h3>
+												<p class="margen-izq">Los usuarios que se propongan establecer un hiperenlace entre su página web y la de la Agencia Tributaria deberán tener en cuenta lo siguiente:</p>
+												<ol>
+														<li class="margen-izq">
+																El establecimiento del hiperenlace no implica en ningún caso la existencia de relaciones entre la Agencia Tributaria y el propietario de la página web en la que se establezca, ni la aceptación y aprobación por parte
+																de la Agencia Tributaria de sus contenidos o servicios. Por tanto, no se declarará ni se dará a entender que la Agencia Tributaria ha autorizado expresamente el hiperenlace ni que ha supervisado o asumido de
+																cualquier forma los servicios ofrecidos o puestos a disposición en la página web desde la que se establece el hiperenlace.
+														</li>
+														<li class="margen-izq">
+																La Agencia Tributaria no se responsabiliza en modo alguno ni garantiza la calidad, exactitud, fiabilidad, corrección o moralidad de contenidos o servicios que el establecimiento del hiperenlace pueda ofrecer. El
+																usuario asume bajo su exclusiva responsabilidad las consecuencias, daños o acciones que pudieran derivarse del acceso a la página web del hiperenlace.
+														</li>
+														<li class="margen-izq">
+																La página web en la que se establezca el hiperenlace no podrá contener ninguna marca, denominación, logotipo, eslogan u otros signos distintivos pertenecientes a la Agencia Tributaria, excepto aquellos signos que
+																formen parte del mismo hiperenlace.
+														</li>
+														<li class="margen-izq">
+																La página web en la que se establezca el hiperenlace no contendrá informaciones con contenidos ilícitos, contrarios a la moral y a las buenas costumbres generalmente aceptadas y al orden público, así como tampoco
+																contendrá contenidos contrarios a cualesquiera derechos de terceros.
+														</li>
+												</ol>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Cesión de manuales, programas de ayuda y publicaciones informativas incluidos en la web de la AEAT</h4>
+												<p>
+														La Agencia Tributaria autoriza la descarga gratuita de los manuales, impresos, programas de ayuda y publicaciones informativas incluidos en su web a efectos de su reproducción y distribución, salvo que se indique lo
+														contrario de forma expresa en la propia web.
+												</p>
+												<p>
+														El cesionario queda autorizado a realizar a su cargo las reproducciones de los manuales, impresos, programas de ayuda y publicaciones incluidos en la web de la AEAT que estime convenientes, quedando expresamente
+														prohibida cualquier alteración o manipulación de los mismos.
+												</p>
+												<p>
+														Las reproducciones de los manuales prácticos y publicaciones informativas efectuadas por los cesionarios no podrán incluir ningún tipo de publicidad, aunque podrán estampar en dichas reproducciones su anagrama y
+														denominación empresarial. Necesariamente deberá constar el siguiente texto “Manual práctico cedido gratuitamente por la Agencia Tributaria” o “Publicación informativa cedida gratuitamente por la Agencia Tributaria”.
+												</p>
+												<p>
+														El soporte en que los cesionarios realicen las reproducciones de los programas de ayuda deberá estar protegido contra escritura. La presentación externa&nbsp;deberá contener el anagrama y denominación de la Agencia
+														Tributaria y necesariamente el siguiente texto “Programa cedido gratuitamente por la Agencia Tributaria”.
+												</p>
+												<p>El cesionario realizará la distribución del manual, impreso, publicación o programa de ayuda de forma gratuita.</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Propiedad intelectual</h4>
+												<p>Los derechos de propiedad intelectual de&nbsp;la web de la AEAT, su diseño gráfico y los códigos que contiene son titularidad de la Agencia Tributaria, a no ser que se indique una titularidad diferente.</p>
+												<p>La reproducción, distribución, comercialización o transformación no autorizadas de estas obras constituye una infracción de los derechos de propiedad intelectual de la Agencia Tributaria o de aquél que sea titular.</p>
+												<p>Igualmente, todas las marcas o signos distintivos de cualquier clase contenidos en el Portal y/o Sede están protegidos por Ley.</p>
+												<p>
+														La utilización no autorizada de la información contenida en&nbsp;la web de la AEAT, así como los perjuicios ocasionados en los derechos de propiedad intelectual e industrial de la Agencia Tributaria pueden dar lugar al
+														ejercicio de las acciones que legalmente correspondan y, si procede, a las responsabilidades que de dicho ejercicio se deriven.
+												</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Política de privacidad</h4>
+												<p>Además de las consideraciones realizadas en los apartados anteriores, la política de privacidad de la web de la AEAT, se basa en:</p>
+												<ul>
+														<li>
+																<p>La solicitud de los datos necesarios para poder proporcionarle los servicios solicitados.</p>
+														</li>
+														<li>
+																<p>
+																		El tratamiento de los datos de carácter personal de acuerdo a lo establecido por el "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas
+																		físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (Reglamento general de protección de datos)" y la "Ley Orgánica 3/2018, de 5 de diciembre,de Protección de
+																		Datos Personales y garantía de los derechos digitales” y demás normativa de aplicación. Puede encontrar más información en el enlace: "Ayuda Tratamiento de datos personales"
+																</p>
+														</li>
+														<li>
+																Cookies:
+																<p>La web de la AEAT utiliza cookies (archivos de información que se guardan en el ordenador del usuario) en la medida imprescindible para el correcto funcionamiento y visualización del sitio web.</p>
+																<p>Las cookies utilizadas tienen una vigencia temporal limitada y en ningún caso se usan para recoger información de carácter personal.</p>
+														</li>
+														<li>
+																Google Analytics:
+																<ol>
+																		<li>La Web de la AEAT utiliza Google Analytics, un servicio prestado por Google, Inc., que permite analizar el uso que hacen los usuarios del sitio web, con objeto exclusivamente estadístico.</li>
+																		<li>
+																				A estos efectos, Google Analytics utiliza cookies. La información que genera la cookie para elaborar la información estadística será directamente transmitida y archivada por Google. Para garantizar el
+																				anonimato, Google convertirá su información en anónima truncando la dirección IP antes de almacenarla, de forma que Google Analytics no se usa para localizar o recabar información personal identificable de
+																				los visitantes del sitio. Google solo podrá enviar la información recabada por Google Analytics a terceros cuando esté legalmente obligado a ello. Con arreglo a las condiciones de prestación del servicio de
+																				Google Analytics, Google no asociará su dirección IP a ningún otro dato conservado por Google.
+																		</li>
+																		<li>
+																				Si usted quiere denegar el permiso para el tratamiento estadístico de los datos o la información con Google Analytics, pinche&nbsp;
+																				<a class="azul-negrita" href="#"><strong>aquí</strong></a>. Esta acción establece que no se envíe la información relativa a la visita del sitio a Google
+																				Analytics. Deberá ejecutar esta acción cada vez que cambie de navegador o su configuración. Recuerde que si borra las cookies deberá volver a ejecutar esta acción para volver a denegar el permiso, ya que el
+																				indicador de denegación se guarda en una cookie.
+																		</li>
+																</ol>
+														</li>
+												</ul>
+										</div>
+								</li>
+								<li><span class="lista1"></span><a href="/AEAT.sede/Ayuda/FZ08.shtml" target="_self">Ayuda Tratamiento de datos personales</a></li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Sistemas de identificación y firma electrónica</h4>
+												<p>
+														Para poder acceder a la práctica totalidad de los servicios y trámites ofrecidos en la web de la Agencia Tributaria usted deberá acreditar su identidad y, en los casos en los que así se requiera, firmar electrónicamente
+														los escritos presentados. Para estos fines, se aceptarán los sistemas de identificación y firma electrónica admitidos por la Agencia Tributaria, detallados en el siguiente enlace
+														<a href="http://www.agenciatributaria.es/AEAT.internet/Ayuda_Selector.shtml">
+																<em><span class="azul-negrita">“Tipos de acceso a trámites de Sede”</span></em>
+														</a>
+												</p>
+										</div>
+								</li>
+								<li class="noImage">
+										<div class="mensajeMiDesplegado">
+												<h4>Derecho aplicable y jurisdicción competente</h4>
+												<p>La ley aplicable en caso de disputa o conflicto de interpretación de los términos que conforman este aviso legal, así como cualquier cuestión relacionada con los servicios de esta web, será la ley española.</p>
+												<p>
+														Para la resolución de cualquier conflicto que pueda surgir con ocasión de la visita a la web de la AEAT o del uso de los servicios que en ella se ofertan, la Agencia Tributaria y el usuario acuerdan someterse a los
+														Jueces y Tribunales de domicilio del usuario o usuaria, siempre que esté situado en territorio español.
+												</p>
+										</div>
+								</li>
+						</ul>
+					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
-
-	<!-- Modal info -->
-	<div class="modal fade" id="more-info" tabindex="-1" role="dialog" aria-labelledby="more-infoLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title" id="more-infoLabel">Frequently asked questions</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				</div>
-				<div class="modal-body">
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
+					<button type="button" class="btn_1" data-dismiss="modal">Cerrar</button>
 				</div>
 			</div>
 			<!-- /.modal-content -->
@@ -422,6 +442,7 @@
     <script src="js/common_scripts.min.js"></script>
 	<script src="js/velocity.min.js"></script>
 	<script src="js/common_functions.js"></script>
+	<script src="js/file-validator.js"></script>
 
 	<!-- Wizard script-->
 	<script src="js/func_1.js"></script>

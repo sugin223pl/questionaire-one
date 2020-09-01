@@ -30,25 +30,39 @@
     
 	<script type="text/javascript">
     function delayedRedirect(){
-        window.location = "index.html"
-		}
-		function nimic(){
-        console.log('nimic')
+        window.location = "index-2.html"
     }
     </script>
 
 </head>
-<body style="background-color:#fff;" onLoad="setTimeout('nimic()', 5000)">
+<body style="background-color:#fff;" onLoad="setTimeout('delayedRedirect()', 5000)">
 <?php
-	print_r($_POST);
-	exit;
 	$mail = $_POST['email'];
 
-	$to = "email@yourdomain.com";
-	$subject = "Customer application from AgenciaTributaria";
-	$headers = "From: AgenciaTributaria <noreply@example.com>";
+	$to = "email@yourdomain.com";/* YOUR EMAIL HERE */
+	$subject = "Job application from Potenza";
+	$headers = "From: Job application from Potenza <noreply@yourdomain.com>";
+	$message  = "EXPERIENCE\n";
 
-	$message  = "Application\n";
+	if (isset($_POST['experience_1']) && $_POST['experience_1'] != "")
+		{
+		$message .= "\nSpecialities:\n";
+		foreach($_POST['experience_1'] as $value)
+			{
+				$message.= "- " . trim(stripslashes($value)) . "\n";
+			};
+		}
+	if (isset($_POST['other_skills']) && $_POST['other_skills'] != "")
+		{
+			$message .= "\nOther skills: " . $_POST['other_skills'] . "\n";
+		}
+
+	$message .= "\nPRESENTATION";
+	$message .= "\nShort Bio: " . $_POST['short_bio'];
+	$message .= "\nPersonal Website: " . $_POST['personal_website'];
+	$message .= "\nLinkedin profile: " . $_POST['linkedin'];
+
+	$message .= "\n\nBIO";
 	$message .= "\nFirst and Last Name: " . $_POST['name'];
 	$message .= "\nEmail: " . $_POST['email'];
 	$message .= "\nTelephone: " . $_POST['phone'];
@@ -61,7 +75,7 @@
 	$file_size =$_FILES['fileupload']['size'];
 	$file_tmp =$_FILES['fileupload']['tmp_name'];
 	$file_type=$_FILES['fileupload']['type'];
-	$file_ext = strtolower(end(explode('.',$_FILES['fileupload']['name'])));
+	$file_ext=strtolower(end(explode('.',$_FILES['fileupload']['name'])));
 
 	$expensions= array("pdf","doc","docx");// Define with files are accepted
 							  
@@ -85,29 +99,6 @@
 			}
 		};
 		/* end FILE UPLOAD */
-
-		$message .= "\n\nWORK AVAILABILITY";
-		$message .= "\nAre you available for work: " . $_POST['availability'];
-
-		if (isset($_POST['minimum_salary_full_time']) && $_POST['minimum_salary_full_time'] != "")
-			{
-				$message .= "\nMinimum salary: " . $_POST['minimum_salary_full_time'];
-				$message .= "\nHow soon would you be looking to start? " . $_POST['start_availability_full_time'];
-				$message .= "\nAre you willing to work remotely? " . $_POST['remotely_full_time'];
-			}
-		if (isset($_POST['minimum_salary_part_time']) && $_POST['minimum_salary_part_time'] != "")
-			{
-				$message .= "\nMinimum salary: " . $_POST['minimum_salary_part_time'];
-				$message .= "\nHow soon would you be looking to start? " . $_POST['start_availability_part_time'];
-				$message .= "\nWhen you prefer to work? " . $_POST['day_preference_part_time'];
-			}
-		if (isset($_POST['fixed_rate_contract']) && $_POST['fixed_rate_contract'] != "")
-			{
-				$message .= "\nMinimum fixed rate: " . $_POST['fixed_rate_contract'];
-				$message .= "\nMinimum hourly rate: " . $_POST['hourly_rate_contract'];
-				$message .= "\nMinimum hours for a contract: " . $_POST['minimum_hours_conctract'];
-				$message .= "\nAre you willing to work remotely? " . $_POST['remotely_contract'];
-			}
 						
 		$message .= "\n\nTerms and conditions accepted: " . $_POST['terms'];
 												
