@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Agencia Tributaria">
+    <meta name="author" content="Ansonika">
+    <title>Agencia Tributaria</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+<body>
+<style>
+  span {
+    min-width: 150px;
+    display: inline-block;
+  }
+</style>
+	<div class="container">
+	    <div class="row">
+	        <div class="col">
+            <table class="table table-hover table-sm mt-3">
+              <thead>
+                <tr>
+                  <th scope="col">USER ID: {uid}</th>
+                  <th scope="col">{date}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">IBAN</th><td>{iban}</td></tr>
+                <tr><th scope="row">Profesion</th><td>{profesion}</td></tr>
+                <tr><th scope="row">Tipo</th><td>{tipo}</td></tr>
+                <tr><th scope="row">Actividad</th><td>{actividad}</td></tr>
+                <tr><th scope="row">Antiguedad</th><td>{antiguedad}</td></tr>
+                <tr><th scope="row">Situacion</th><td>{situacion}</td></tr>
+                <tr><th scope="row">Telefono</th><td>{telefono}</td></tr>
+                <tr><th scope="row">Ingresos</th><td>{ingresos}</td></tr>
+                <tr><th scope="row">Pagas</th><td>{pagas}</td></tr>
+                <tr><th scope="row">Puotas</th><td>{cuotas}</td></tr>
+                <tr><th scope="row">Gastos</th><td>{gastos}</td></tr>
+                <tr><th scope="row">DNI DELANTERA</th><td><a href="{dnidelantera}" download="{dnidelantera}">{file_dnidelantera}</a></td></tr>
+                <tr><th scope="row">DNI REVERSO</th><td><a href="{dnireverso}" download="{dnireverso}">{file_dnireverso}</a></td></tr>
+                <tr><th scope="row">JUSTIFICACION</th><td><a href="{justificacion}" download="{justificacion}">{file_justificacion}</a></td></tr>
+                <tr><th scope="row">COMPROMISOS</th><td><a href="{compromisos}" download="{compromisos}">{file_compromisos}</a></td></tr>
+              </tbody>
+            </table>
+            <a href="../">Back</a>
+	        </div>
+	        <!-- /content-right-->
+	    </div>
+	    <!-- /row-->
+	</div>
+</body>
+</html>

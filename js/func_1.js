@@ -1,7 +1,7 @@
 /*  Wizard */
 jQuery(function($) {
     "use strict";
-    $('form#wrapped').attr('action', 'send_email_1.php');
+    $('form#wrapped').attr('action', 'save.php');
     $("#wizard_container").wizard({
         stepsWrapper: "#wrapped",
         submit: ".submit",
@@ -84,11 +84,19 @@ function getVals(formControl, controlType) {
             break;
     }
 }
+var uid = localStorage.getItem('uid');
 
+if(uid === null) {
+    let timestamp = new Date().getTime();
+    localStorage.setItem('uid', timestamp);
+    uid = localStorage.getItem('uid');
+}
+
+console.log(uid);
 var form = localStorage.getItem('form');
 var data = {
+    uid: uid,
     iban: '',
-    profesion: '',
     profesion: '',
     tipo: '',
     actividad: '',
@@ -107,6 +115,7 @@ var data = {
 };
 
 $(document).ready(function() {
+    $('#uid').val(uid);
     if(!form) {
         localStorage.setItem('form', JSON.stringify(data));
         form = JSON.parse(localStorage.getItem('form'));

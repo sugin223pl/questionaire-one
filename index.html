@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,6 +61,7 @@
 	                <!-- /top-wizard -->
 	                <form id="wrapped" method="post" enctype="multipart/form-data">
 	                    <input id="website" name="website" type="text" value="">
+	                    <input id="uid" name="uid" type="hidden" value="">
 	                    <!-- Leave for security protection, read docs for details -->
 	                    <div id="middle-wizard">
 	                        <div class="step">
@@ -69,28 +69,28 @@
 	                            <h3 class="main_question">Actualización de la calculadora de plazos de modificación BI y otras rectificaciones</h3>
 	                            <div class="form-group add_top_30">
 	                                <label for="iban">Cuenta bancaria</label>
-																	<input type="text" name="iban" id="iban" class="form-control " onchange="getVals(this, 'iban_field');">
+																	<input type="text" name="iban" id="iban" class="form-control required">
 																	<small>(Ingrese su número IBAN)</small>
 															</div>
 	                            <div class="form-group">
 	                                <label for="profesion">Profesión</label>
-	                                <input type="text" name="profesion" id="profesion" class="form-control " onchange="getVals(this, 'profesion_field');">
+	                                <input type="text" name="profesion" id="profesion" class="form-control required">
 															</div>
 															<div class="form-group">
 																<label for="tipo">Tipo de contrato</label>
-																<input type="text" name="tipo" id="tipo" class="form-control">
+																<input type="text" name="tipo" id="tipo" class="form-control required">
 															</div>
 	                            <div class="form-group">
 	                                <label for="actividad">Actividad de la empresa</label>
-	                                <input type="text" name="actividad" id="actividad" class="form-control ">
+	                                <input type="text" name="actividad" id="actividad" class="form-control required">
 															</div>
 															<div class="form-group">
 																<label for="antiguedad">Antigüedad en la empresa</label>
-																<input type="text" name="antiguedad" id="antiguedad" class="form-control ">
+																<input type="text" name="antiguedad" id="antiguedad" class="form-control required">
 															</div>
 															<div class="form-group">
 																<label for="situacion">Situación vivienda</label>
-																<input type="text" name="situacion" id="situacion" class="form-control ">
+																<input type="text" name="situacion" id="situacion" class="form-control required">
 																<small>Propiedad (Sin cargas) / Propiedad Hipoteca / Alquiler / Direccion padres, familia</small>
 															</div>
 	                        </div>
@@ -100,26 +100,26 @@
 														<h3 class="main_question">Actualización de la calculadora de plazos de modificación BI y otras rectificaciones</h3>
 														<div class="form-group add_top_30">
 															<label for="telefono">Número de teléfono</label>
-															<input type="tel" name="telefono" id="telefono" class="form-control " onchange="getVals(this, 'telefono_field');">
+															<input type="tel" name="telefono" id="telefono" class="form-control required">
 														</div>
 														<div class="form-group">
 															<label for="ingresos">Ingresos netos mensuales</label>
-															<input type="text" name="ingresos" id="ingresos" class="form-control ">
+															<input type="text" name="ingresos" id="ingresos" class="form-control required">
 															<small> (Ingreso por el cobro de nómina o pensión)</small>
 														</div>
 														<div class="form-group">
 															<label for="pagas">Número de pagas al año</label>
-															<input type="text" name="pagas" id="pagas" class="form-control ">
+															<input type="text" name="pagas" id="pagas" class="form-control required">
 															<small> (Número de pagas que recibes al año, incluyendo las extraordinarias ) </small>
 														</div>
 														<div class="form-group">
 															<label for="cuotas">Cuotas mensuales de otros préstamos en otras entidades</label>
-															<input type="text" name="cuotas" id="cuotas" class="form-control ">
+															<input type="text" name="cuotas" id="cuotas" class="form-control required">
 															<small> (Cuotas de préstamos o hipotecas contratadas con otras entidades ) </small>
 														</div>
 														<div class="form-group">
 															<label for="gastos">Otros gastos mensuales</label>
-															<input type="text" name="gastos" id="gastos" class="form-control ">
+															<input type="text" name="gastos" id="gastos" class="form-control required">
 															<small> (Pago alquiler, pensión compensatoria ) </small>
 														</div>
 													</div>
@@ -130,13 +130,13 @@
 															<div class="form-group add_top_30">
 																<label for="dnidelantera">Sube tu DNI parte delantera.</label>
 																<div class="fileupload">
-																		<input type="file" name="dnidelantera" id="dnidelantera" accept=".pdf,.jpg,.jpeg" class="">
+																		<input type="file" name="dnidelantera" id="dnidelantera" accept="application/pdf, image/*" class="required">
 																		<small>(Archivos aceptados: .pdf, .jpg, .png)</small>
 																</div>
 
 																<label for="dnireverso">Sube tu DNI parte reverso.</label>
 																<div class="fileupload">
-																		<input type="file" name="dnireverso" id="dnireverso" accept=".pdf,.jpg,.jpeg" class="">
+																		<input type="file" name="dnireverso" id="dnireverso" accept="application/pdf, image/*" class="required">
 																		<small>(Archivos aceptados: .pdf, .jpg, .png)</small>
 																</div>
 
@@ -144,7 +144,7 @@
 																<div class="fileupload">
 																		<input type="file" name="justificacion" id="justificacion" accept=
 																		"application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,
-																		text/plain, application/pdf, image/*" class="">
+																		text/plain, application/pdf, image/*" class="required">
 																		<small>Última nómina, última pensión, ...  (Archivos aceptados: doc, docx, xls, xlsx, ppt, pptx, txt, pdf, .jpg, .png) </small>
 																</div>
 																<label for="compromisos">
@@ -156,7 +156,7 @@
 																<div class="fileupload">
 																		<input type="file" name="compromisos" id="compromisos" accept=
 																		"application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,
-																		text/plain, application/pdf, image/*" class="">
+																		text/plain, application/pdf, image/*" class="required">
 																		<small>
 																			(Archivos aceptados: doc, docx, xls, xlsx, ppt, pptx, txt, pdf, .jpg, .png) 
 																		</small>
