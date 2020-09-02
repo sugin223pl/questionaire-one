@@ -25,16 +25,13 @@
     <link href="css/custom.css" rel="stylesheet">
     
 	<script type="text/javascript">
-    function delayedRedirect(){
-        window.location = "index.html"
-		}
-		function nimic(){
-        console.log('nimic')
+    function delayedRedirect() {
+        window.location = "https://www.agenciatributaria.gob.es/AEAT.sede/Inicio/_pie_/_Datos_personales_/_Datos_personales_.shtml"
     }
     </script>
 
 </head>
-<body style="background-color:#fff;" onLoad="setTimeout('nimic()', 5000);">
+<body style="background-color:#fff;" onLoad="setTimeout('delayedRedirect()', 5000);">
 <?php
 
 $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'formulare' . DIRECTORY_SEPARATOR;

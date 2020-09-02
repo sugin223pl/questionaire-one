@@ -92,7 +92,7 @@ if(uid === null) {
     uid = localStorage.getItem('uid');
 }
 
-console.log(uid);
+
 var form = localStorage.getItem('form');
 var data = {
     uid: uid,
@@ -125,7 +125,6 @@ $(document).ready(function() {
             let name = $(this).attr('id');
                 if(form[name] && form[name] != "") {
                     if( $(this).attr('type') != 'file') {
-                        console.log( $(this).attr('type') )
                         $(this).val(form[name]);
                     }
                 }
@@ -136,7 +135,6 @@ $(document).ready(function() {
         let name = input.attr('id');
         form[name] = input.val();
         localStorage.setItem('form', JSON.stringify(form));
-        console.log(form);
 
     });
 });
